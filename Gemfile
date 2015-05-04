@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "paperclip"
 gem 'fog'
+gem 'fog-aws'
 gem 'nokogiri'
 gem 'kaminari'
 gem 'rmagick', require: 'rmagick'
