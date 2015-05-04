@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'pg'
@@ -17,7 +18,7 @@ gem "paperclip"
 gem 'fog'
 gem 'nokogiri'
 gem 'kaminari'
-gem 'rmagick', require: 'RMagick'
+gem 'rmagick', require: 'rmagick'
 gem 'mechanize'
 
 gem 'twitter-bootstrap-rails'
@@ -31,3 +32,7 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
+
+group :production do
+  gem 'rails_12factor'
+end
