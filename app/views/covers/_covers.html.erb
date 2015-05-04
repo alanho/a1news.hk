@@ -1,0 +1,11 @@
+<% @covers.each do |cover| -%>
+<div class="col-sm-12 col-md-4 <%= cover.source %> cover">
+  <h2><%= link_to cover.friendly_source_name, cover.link_url, title: cover.headline || "", target: "_blank", data: { toggle: "tooltip", source: cover.source } %></h2>
+  <%= link_to cover.link_url, target: "_blank", title: cover.headline || "", class: "thumbnail", data: { toggle: "tooltip", source: cover.source } do %>
+    <div class="thumbbox">
+      <%= image_tag cover.backup_image.url, alt: cover.headline || "#{cover.source} - #{cover.date.strftime("%Y%m%d")}" %>
+    </div>
+  <% end %>
+</div>
+<% end %>
+<%= link_to_next_page @covers, 'Next Page', class: "pager-loader" %>

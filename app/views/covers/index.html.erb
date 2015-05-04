@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-12">
+    <ul class="breadcrumb">
+      <li><%= @date.to_s(:chinese) %></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <%= render(@covers) || "<div class='span12'><div class='alert alert-error'>No headlines available yet</div></div>".html_safe %>
+</div>
