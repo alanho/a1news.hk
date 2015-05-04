@@ -6,7 +6,7 @@ Paperclip::Attachment.default_options.update({
     :aws_secret_access_key => ENV['S3_ACCESS_KEY']
   },
   :fog_directory => "a1news-#{Rails.env}",
-  :path => "/cover_backups/:hash/:style",
+  :path => "cover_backups/:hash/:style",
   :fog_public => true,
   :hash_secret => ENV['PAPERCLIP_HASH_SECRET'] || "foobar"
 }) if Rails.env.production?
